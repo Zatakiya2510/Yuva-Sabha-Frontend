@@ -1,0 +1,502 @@
+/*
+====================================================
+Events Page
+====================================================
+*/
+
+.events-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.events-header h2 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+
+}
+
+.events-header p {
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+}
+
+/*
+====================================================
+Add Button
+====================================================
+*/
+
+.add-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #2563eb;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.add-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+/*
+====================================================
+Search
+====================================================
+*/
+
+.search-container {
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+}
+
+.search-icon {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 18px;
+
+    color: #6b7280;
+
+}
+
+.search-container input {
+
+    width: 100%;
+
+    padding: 14px 18px 14px 48px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+.search-container input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+
+}
+
+/*
+====================================================
+Table
+====================================================
+*/
+
+.table-container {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.events-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.events-table thead {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+.events-table th {
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.events-table td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+
+}
+
+.events-table tbody tr {
+
+    transition: .3s;
+
+}
+
+.events-table tbody tr:hover {
+
+    background: #f8fafc;
+
+}
+
+/*
+====================================================
+Event Name
+====================================================
+*/
+
+.event-name {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+.event-name svg {
+
+    margin-top: 5px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+}
+
+.event-name strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    color: #111827;
+
+}
+
+.event-name small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+}
+
+/*
+====================================================
+Location
+====================================================
+*/
+
+.event-location {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #374151;
+
+}
+
+.event-location svg {
+
+    color: #ef4444;
+
+}
+
+/*
+====================================================
+Status Badge
+====================================================
+*/
+
+.event-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.event-status.upcoming {
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+}
+
+.event-status.completed {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+.event-status.cancelled {
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+}
+
+/*
+====================================================
+Action Buttons
+====================================================
+*/
+
+.action-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.edit-btn,
+.delete-btn {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .3s;
+
+}
+
+.edit-btn {
+
+    background: #f59e0b;
+
+    color: white;
+
+}
+
+.edit-btn:hover {
+
+    background: #d97706;
+
+}
+
+.delete-btn {
+
+    background: #ef4444;
+
+    color: white;
+
+}
+
+.delete-btn:hover {
+
+    background: #dc2626;
+
+}
+
+/*
+====================================================
+Pagination
+====================================================
+*/
+
+.pagination {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+.pagination button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.pagination button:hover:not(:disabled) {
+
+    background: #1d4ed8;
+
+}
+
+.pagination button:disabled {
+
+    opacity: .5;
+
+    cursor: not-allowed;
+
+}
+
+.pagination span {
+
+    font-weight: 600;
+
+    color: #374151;
+
+}
+
+/*
+====================================================
+Loading
+====================================================
+*/
+
+.loading {
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+}
+
+/*
+====================================================
+Responsive
+====================================================
+*/
+
+@media (max-width: 992px) {
+
+    .table-container {
+
+        overflow-x: auto;
+
+    }
+
+    .events-table {
+
+        min-width: 900px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .events-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .add-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}

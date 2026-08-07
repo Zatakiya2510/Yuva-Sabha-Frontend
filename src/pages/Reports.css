@@ -1,0 +1,536 @@
+/*
+====================================================
+Reports Page
+====================================================
+*/
+
+.reports-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.reports-header h2 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 6px;
+
+}
+
+.reports-header p {
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+}
+
+/*
+====================================================
+Filters
+====================================================
+*/
+
+.report-filters {
+
+    display: grid;
+
+    grid-template-columns: 2fr 2fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+.filter-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.filter-group label {
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+}
+
+.filter-group select,
+.filter-group input {
+
+    height: 48px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+
+}
+
+.search-box {
+
+    position: relative;
+
+}
+
+.search-icon {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #6b7280;
+
+}
+
+.search-box input {
+
+    width: 100%;
+
+    padding-left: 45px;
+
+}
+
+/*
+====================================================
+Summary Cards
+====================================================
+*/
+
+.report-summary {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+.summary-card {
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.summary-card svg {
+
+    font-size: 34px;
+
+    color: #2563eb;
+
+}
+
+.summary-card h5 {
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+    font-weight: 600;
+
+}
+
+.summary-card h2 {
+
+    font-size: 28px;
+
+    color: #111827;
+
+}
+
+.summary-card.present {
+
+    border-left: 5px solid #22c55e;
+
+}
+
+.summary-card.present svg {
+
+    color: #22c55e;
+
+}
+
+.summary-card.absent {
+
+    border-left: 5px solid #ef4444;
+
+}
+
+.summary-card.absent svg {
+
+    color: #ef4444;
+
+}
+
+.summary-card.percentage {
+
+    border-left: 5px solid #2563eb;
+
+}
+
+/*
+====================================================
+Table
+====================================================
+*/
+
+.report-table-container {
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.report-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.report-table thead {
+
+    background: #2563eb;
+
+    color: #fff;
+
+}
+
+.report-table th {
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.report-table td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+}
+
+.report-table tbody tr {
+
+    transition: .25s;
+
+}
+
+.report-table tbody tr:hover {
+
+    background: #f8fafc;
+
+}
+
+/*
+====================================================
+Status Badge
+====================================================
+*/
+
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.status-badge.present {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+.status-badge.absent {
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+}
+
+/*
+====================================================
+Actions
+====================================================
+*/
+
+.report-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+.excel-btn,
+.pdf-btn,
+.print-btn {
+
+    border: none;
+
+    color: #fff;
+
+    padding: 13px 24px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.excel-btn {
+
+    background: #16a34a;
+
+}
+
+.excel-btn:hover {
+
+    background: #15803d;
+
+}
+
+.pdf-btn {
+
+    background: #dc2626;
+
+}
+
+.pdf-btn:hover {
+
+    background: #b91c1c;
+
+}
+
+.print-btn {
+
+    background: #2563eb;
+
+}
+
+.print-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+/*
+====================================================
+Loading
+====================================================
+*/
+
+.loading {
+
+    text-align: center;
+
+    padding: 60px;
+
+    color: #6b7280;
+
+    font-size: 18px;
+
+}
+
+/*
+====================================================
+Responsive
+====================================================
+*/
+
+@media(max-width:1100px) {
+
+    .report-summary {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:992px) {
+
+    .report-table-container {
+
+        overflow-x: auto;
+
+    }
+
+    .report-table {
+
+        min-width: 800px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .report-filters {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .report-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .report-actions {
+
+        flex-direction: column;
+
+    }
+
+    .excel-btn,
+    .pdf-btn,
+    .print-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .reports-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+    .reports-header h2 {
+
+        font-size: 26px;
+
+    }
+
+}
+
+/*
+====================================================
+Print
+====================================================
+*/
+
+@media print {
+
+    .report-filters,
+    .report-actions {
+
+        display: none;
+
+    }
+
+    .report-table-container {
+
+        box-shadow: none;
+
+        border: 1px solid #000;
+
+    }
+
+    .reports-header h2 {
+
+        color: #000;
+
+    }
+
+}

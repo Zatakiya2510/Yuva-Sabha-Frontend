@@ -1,0 +1,385 @@
+/*
+====================================================
+Event Form Page
+====================================================
+*/
+
+.event-form-page {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+/*
+====================================================
+Header
+====================================================
+*/
+
+.event-form-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.event-form-header h2 {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 6px;
+
+}
+
+.event-form-header p {
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+}
+
+/*
+====================================================
+Form Card
+====================================================
+*/
+
+.event-form {
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+
+}
+
+/*
+====================================================
+Grid
+====================================================
+*/
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+/*
+====================================================
+Form Group
+====================================================
+*/
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.form-group label {
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+}
+
+.form-group input,
+
+.form-group select,
+
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    padding: 12px 15px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .3s;
+
+    font-family: inherit;
+
+    background: #fff;
+
+}
+
+.form-group input {
+
+    height: 48px;
+
+}
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 140px;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus,
+
+.form-group textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+
+}
+
+/*
+====================================================
+Description
+====================================================
+*/
+
+.full-width {
+
+    grid-column: 1 / -1;
+
+    margin-top: 25px;
+
+}
+
+/*
+====================================================
+Buttons
+====================================================
+*/
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+.cancel-btn {
+
+    border: none;
+
+    background: #e5e7eb;
+
+    color: #374151;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.cancel-btn:hover {
+
+    background: #d1d5db;
+
+}
+
+.save-btn {
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.save-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+.save-btn:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+/*
+====================================================
+Loading
+====================================================
+*/
+
+.loading-box {
+
+    background: #fff;
+
+    padding: 80px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #6b7280;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+
+}
+
+/*
+====================================================
+Input Icons (Optional)
+====================================================
+*/
+
+.input-with-icon {
+
+    position: relative;
+
+}
+
+.input-with-icon svg {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    color: #6b7280;
+
+}
+
+.input-with-icon input {
+
+    padding-left: 45px;
+
+}
+
+/*
+====================================================
+Responsive
+====================================================
+*/
+
+@media (max-width: 768px) {
+
+    .event-form {
+
+        padding: 25px;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .full-width {
+
+        grid-column: auto;
+
+        margin-top: 0;
+
+    }
+
+    .form-actions {
+
+        flex-direction: column;
+
+    }
+
+    .cancel-btn,
+
+    .save-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .event-form-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+    .event-form-header h2 {
+
+        font-size: 26px;
+
+    }
+
+}

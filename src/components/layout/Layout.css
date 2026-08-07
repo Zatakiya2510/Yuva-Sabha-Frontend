@@ -1,0 +1,27 @@
+.layout {
+
+    display: flex;
+
+    min-height: 100vh;
+
+    background: #f4f6f9;
+
+}
+
+.main-content {
+
+    flex: 1;
+
+    margin-left: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.page-content {
+
+    padding: 25px;
+
+}
