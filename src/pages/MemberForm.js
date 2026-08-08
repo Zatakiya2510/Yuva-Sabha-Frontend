@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -58,59 +58,38 @@ const MemberForm = () => {
     ======================================
     */
 
-    const fetchMember = async () => {
-
+    const fetchMember = useCallback(async () => {
         try {
-
             setLoading(true);
 
             const { data } = await api.get(
-
                 `/users/${id}`
-
             );
 
             setFormData({
-
                 fullName:
-
                     data.data.fullName || "",
 
                 contactNumber:
-
                     data.data.contactNumber || "",
 
                 role:
-
                     data.data.role || "Member",
 
                 status:
-
                     data.data.status || "Active",
-
             });
-
         }
-
         catch (error) {
-
             toast.error(
-
                 error.response?.data?.message ||
-
                 "Unable to load member."
-
             );
-
         }
-
         finally {
-
             setLoading(false);
-
         }
-
-    };
+    }, [id]);
 
     /*
     ======================================

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -66,61 +66,32 @@ const EventForm = () => {
     =====================================
     */
 
-    const fetchEvent = async () => {
-
+    const fetchEvent = useCallback(async () => {
         try {
-
             setLoading(true);
 
-            const { data } = await api.get(
-
-                `/events/${id}`
-
-            );
+            const { data } = await api.get(`/events/${id}`);
 
             const event = data.data;
 
             setFormData({
-
                 title: event.title || "",
-
                 date: event.date
                     ? event.date.substring(0, 10)
                     : "",
-
                 location: event.location || "",
-
-                description:
-
-                    event.description || "",
-
-                status:
-
-                    event.status || "Upcoming",
-
+                description: event.description || "",
+                status: event.status || "Upcoming",
             });
-
-        }
-
-        catch (error) {
-
+        } catch (error) {
             toast.error(
-
                 error.response?.data?.message ||
-
                 "Unable to load event."
-
             );
-
-        }
-
-        finally {
-
+        } finally {
             setLoading(false);
-
         }
-
-    };
+    }, [id]);
 
     /*
     =====================================
@@ -132,8 +103,8 @@ const EventForm = () => {
         if (isEdit) {
             fetchEvent();
         }
-    }, [id, isEdit, fetchEvent]);   
-    
+    }, [isEdit, fetchEvent]);
+
     /*
     =====================================
     Save / Update Event
