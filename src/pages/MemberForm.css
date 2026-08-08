@@ -283,3 +283,57 @@ Responsive
     }
 
 }
+
+/* Additional responsive refinements */
+@media (max-width: 992px) {
+    .member-form-page {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-form {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .form-grid {
+        gap: 18px;
+    }
+
+    .loading-box {
+        padding: 55px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .member-form {
+        padding: 16px;
+    }
+
+    .member-form-header {
+        margin-bottom: 18px;
+    }
+
+    .member-form-header h2 {
+        font-size: 23px;
+    }
+
+    .member-form-header p {
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .form-actions {
+        margin-top: 24px;
+        gap: 10px;
+    }
+}

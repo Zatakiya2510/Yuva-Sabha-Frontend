@@ -525,3 +525,58 @@ Responsive
     }
 
 }
+
+/* Additional responsive refinements */
+@media (max-width: 768px) {
+    .attendance-page {
+        min-width: 0;
+    }
+
+    .attendance-header {
+        gap: 14px;
+    }
+
+    .attendance-top,
+    .attendance-summary {
+        gap: 14px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .attendance-table-container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .attendance-table {
+        min-width: 760px;
+    }
+}
+
+@media (max-width: 480px) {
+    .attendance-header h2 {
+        font-size: 23px;
+    }
+
+    .attendance-header p {
+        font-size: 13px;
+    }
+
+    .attendance-actions {
+        gap: 10px;
+    }
+
+    .present-btn,
+    .absent-btn,
+    .save-attendance-btn {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

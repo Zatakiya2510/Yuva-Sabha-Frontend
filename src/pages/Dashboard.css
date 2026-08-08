@@ -715,3 +715,67 @@ Responsive
     }
 
 }
+
+/* Additional responsive refinements */
+@media (max-width: 768px) {
+    .dashboard-section {
+        padding: 18px;
+        overflow: hidden;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .section-header h3 {
+        font-size: 22px;
+    }
+
+    .view-all-btn {
+        width: 100%;
+    }
+
+    .dashboard-table {
+        min-width: 650px;
+    }
+
+    .dashboard-section {
+        overflow-x: auto;
+    }
+
+    .dashboard-section .section-header,
+    .dashboard-section .attendance-summary,
+    .dashboard-section .progress-wrapper {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        gap: 14px;
+        margin-bottom: 25px;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+        border-left-width: 4px;
+    }
+
+    .dashboard-card h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-card h3 {
+        font-size: 14px;
+    }
+
+    .dashboard-section {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .summary-card {
+        padding: 13px 15px;
+    }
+}

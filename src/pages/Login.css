@@ -281,3 +281,44 @@ body {
     }
 
 }
+
+/* Additional responsive refinements */
+.login-container {
+    min-height: 100svh;
+}
+
+@media (max-width: 768px) {
+    .login-right {
+        min-height: 100svh;
+        padding: 20px;
+    }
+
+    .login-card {
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-right {
+        padding: 14px;
+    }
+
+    .login-card {
+        padding: 26px 18px;
+        border-radius: 14px;
+    }
+
+    .login-card p {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    .input-group {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .login-btn {
+        padding: 13px;
+    }
+}

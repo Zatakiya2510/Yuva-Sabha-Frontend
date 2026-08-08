@@ -1,75 +1,113 @@
 .header {
-
-    height: 70px;
-
+    min-height: 70px;
     background: white;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    padding: 0 30px;
-
+    gap: 20px;
+    padding: 12px 30px;
     border-bottom: 1px solid #ddd;
+}
 
+.header > div:first-child {
+    min-width: 0;
 }
 
 .header h2 {
-
     margin: 0;
-
+    font-size: 22px;
+    line-height: 1.25;
 }
 
 .header span {
-
     color: #666;
-
     font-size: 14px;
-
 }
 
 .profile {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
+    flex-shrink: 0;
 }
 
 .avatar {
-
     width: 45px;
-
     height: 45px;
-
     border-radius: 50%;
-
     background: #2563eb;
-
     color: white;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     font-weight: bold;
-
     font-size: 18px;
+}
 
+.profile strong,
+.profile p {
+    overflow-wrap: anywhere;
 }
 
 .profile p {
-
     margin: 0;
-
     color: #777;
-
     font-size: 14px;
+}
 
+/* Tablet */
+@media (max-width: 992px) {
+    .header {
+        padding: 12px 20px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header {
+        min-height: 64px;
+        padding: 12px 16px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .header span {
+        font-size: 12px;
+    }
+
+    .profile {
+        gap: 8px;
+    }
+
+    .profile > div:last-child {
+        display: none;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 12px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
 }

@@ -1,27 +1,54 @@
 .layout {
-
     display: flex;
-
     min-height: 100vh;
-
     background: #f4f6f9;
-
+    width: 100%;
 }
 
 .main-content {
-
     flex: 1;
-
     margin-left: 260px;
-
+    min-width: 0;
     display: flex;
-
     flex-direction: column;
-
 }
 
 .page-content {
-
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 25px;
+}
 
+/* Tablet */
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .layout {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .page-content {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding: 12px;
+    }
 }

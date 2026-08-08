@@ -534,3 +534,64 @@ Print
     }
 
 }
+
+/* Additional responsive refinements */
+@media (max-width: 768px) {
+    .reports-header {
+        margin-bottom: 18px;
+    }
+
+    .reports-header h2 {
+        font-size: 25px;
+    }
+
+    .reports-header p {
+        font-size: 13px;
+    }
+
+    .report-filters {
+        gap: 14px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .report-table-container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .report-table {
+        min-width: 760px;
+    }
+
+    .report-actions {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-card {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .summary-card h2 {
+        font-size: 24px;
+    }
+
+    .summary-card svg {
+        font-size: 28px;
+    }
+
+    .filter-group select,
+    .filter-group input {
+        font-size: 14px;
+    }
+
+    .report-table th,
+    .report-table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

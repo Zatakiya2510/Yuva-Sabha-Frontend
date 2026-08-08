@@ -500,3 +500,53 @@ Responsive
     }
 
 }
+
+/* Additional responsive refinements */
+@media (max-width: 768px) {
+    .events-header {
+        margin-bottom: 18px;
+    }
+
+    .events-header h2 {
+        font-size: 25px;
+    }
+
+    .events-header p {
+        font-size: 13px;
+    }
+
+    .table-container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .events-table {
+        min-width: 820px;
+    }
+
+    .events-table th,
+    .events-table td {
+        padding: 13px;
+    }
+
+    .pagination {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container input {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+
+    .pagination button {
+        flex: 1;
+        min-width: 100px;
+    }
+}
