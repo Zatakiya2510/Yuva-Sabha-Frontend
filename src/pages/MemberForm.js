@@ -119,14 +119,14 @@ const MemberForm = () => {
     */
 
     useEffect(() => {
+        if (!isEdit || !id) return;
 
-        if (isEdit) {
+        const loadMember = async () => {
+            await fetchMember();
+        };
 
-            fetchMember();
-
-        }
-
-    }, [id]);
+        loadMember();
+    }, [id, isEdit]);
 
     /*
     ======================================

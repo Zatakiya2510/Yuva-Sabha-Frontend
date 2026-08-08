@@ -129,14 +129,12 @@ const EventForm = () => {
     */
 
     useEffect(() => {
-
         if (isEdit) {
-
             fetchEvent();
-
         }
-
-    }, [id]);    /*
+    }, [id, isEdit, fetchEvent]);   
+    
+    /*
     =====================================
     Save / Update Event
     =====================================
