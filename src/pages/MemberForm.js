@@ -98,14 +98,10 @@ const MemberForm = () => {
     */
 
     useEffect(() => {
-        if (!isEdit || !id) return;
-
-        const loadMember = async () => {
-            await fetchMember();
-        };
-
-        loadMember();
-    }, [id, isEdit]);
+        if (isEdit) {
+            fetchMember();
+        }
+    }, [isEdit, fetchMember]);
 
     /*
     ======================================
