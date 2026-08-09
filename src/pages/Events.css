@@ -124,7 +124,7 @@ Search
 
     border-color: #2563eb;
 
-    box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .08);
 
 }
 
@@ -142,7 +142,7 @@ Table
 
     overflow: hidden;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 
 }
 
@@ -455,6 +455,59 @@ Loading
 
     font-size: 17px;
 
+}
+
+/*
+====================================================
+Event Status Badges
+====================================================
+*/
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1;
+    text-transform: capitalize;
+
+    white-space: nowrap;
+}
+
+/* Upcoming */
+
+.badge.upcoming {
+    background: #dbeafe !important;
+    color: #2563eb !important;
+}
+
+/* Today */
+
+.badge.today {
+    background: #fef3c7 !important;
+    color: #b45309 !important;
+}
+
+/* Completed */
+
+.badge.completed {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+/* Cancelled */
+
+.badge.cancelled {
+    background: #fee2e2 !important;
+    color: #dc2626 !important;
 }
 
 /*
