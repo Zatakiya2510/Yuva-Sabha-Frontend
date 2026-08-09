@@ -37,9 +37,6 @@ const EventForm = () => {
         location: "",
 
         description: "",
-
-        status: "Upcoming",
-
     });
 
     /*
@@ -81,7 +78,6 @@ const EventForm = () => {
                     : "",
                 location: event.location || "",
                 description: event.description || "",
-                status: event.status || "Upcoming",
             });
         } catch (error) {
             toast.error(
@@ -354,50 +350,6 @@ const EventForm = () => {
                                         onChange={handleChange}
 
                                     />
-
-                                </div>
-
-                                {/* ===========================
-                                Status
-                            =========================== */}
-
-                                <div className="form-group">
-
-                                    <label>
-
-                                        Status
-
-                                    </label>
-
-                                    <select
-
-                                        name="status"
-
-                                        value={formData.status}
-
-                                        onChange={handleChange}
-
-                                    >
-
-                                        <option value="Upcoming">
-
-                                            Upcoming
-
-                                        </option>
-
-                                        <option value="Completed">
-
-                                            Completed
-
-                                        </option>
-
-                                        <option value="Cancelled">
-
-                                            Cancelled
-
-                                        </option>
-
-                                    </select>
 
                                 </div>
 
