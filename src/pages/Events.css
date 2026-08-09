@@ -36,6 +36,7 @@ Events Page
 
 }
 
+
 /*
 ====================================================
 Add Button
@@ -47,6 +48,8 @@ Add Button
     display: flex;
 
     align-items: center;
+
+    justify-content: center;
 
     gap: 10px;
 
@@ -64,7 +67,7 @@ Add Button
 
     font-weight: 600;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -75,6 +78,7 @@ Add Button
     transform: translateY(-2px);
 
 }
+
 
 /*
 ====================================================
@@ -116,7 +120,9 @@ Search
 
     font-size: 15px;
 
-    transition: .3s;
+    transition: 0.3s;
+
+    box-sizing: border-box;
 
 }
 
@@ -124,31 +130,47 @@ Search
 
     border-color: #2563eb;
 
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, .08);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
 
 }
 
+
 /*
 ====================================================
-Table
+Table Container
 ====================================================
 */
 
 .table-container {
 
+    width: 100%;
+
     background: #fff;
 
     border-radius: 18px;
 
-    overflow: hidden;
+    overflow-x: auto;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    overflow-y: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    -webkit-overflow-scrolling: touch;
 
 }
+
+
+/*
+====================================================
+Events Table
+====================================================
+*/
 
 .events-table {
 
     width: 100%;
+
+    min-width: 900px;
 
     border-collapse: collapse;
 
@@ -158,7 +180,7 @@ Table
 
     background: #2563eb;
 
-    color: white;
+    color: #fff;
 
 }
 
@@ -171,6 +193,8 @@ Table
     font-size: 14px;
 
     font-weight: 600;
+
+    white-space: nowrap;
 
 }
 
@@ -186,7 +210,7 @@ Table
 
 .events-table tbody tr {
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -195,6 +219,13 @@ Table
     background: #f8fafc;
 
 }
+
+.events-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
 
 /*
 ====================================================
@@ -220,6 +251,8 @@ Event Name
 
     font-size: 18px;
 
+    flex-shrink: 0;
+
 }
 
 .event-name strong {
@@ -242,7 +275,10 @@ Event Name
 
     font-size: 13px;
 
+    line-height: 1.4;
+
 }
+
 
 /*
 ====================================================
@@ -266,11 +302,14 @@ Location
 
     color: #ef4444;
 
+    flex-shrink: 0;
+
 }
+
 
 /*
 ====================================================
-Status Badge
+Event Status Badge
 ====================================================
 */
 
@@ -282,7 +321,9 @@ Status Badge
 
     justify-content: center;
 
-    padding: 7px 14px;
+    min-width: 90px;
+
+    padding: 8px 15px;
 
     border-radius: 30px;
 
@@ -290,7 +331,20 @@ Status Badge
 
     font-weight: 600;
 
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-transform: capitalize;
+
 }
+
+
+/*
+====================================================
+Upcoming
+====================================================
+*/
 
 .event-status.upcoming {
 
@@ -300,6 +354,28 @@ Status Badge
 
 }
 
+
+/*
+====================================================
+Today
+====================================================
+*/
+
+.event-status.today {
+
+    background: #fef3c7;
+
+    color: #b45309;
+
+}
+
+
+/*
+====================================================
+Completed
+====================================================
+*/
+
 .event-status.completed {
 
     background: #dcfce7;
@@ -308,6 +384,13 @@ Status Badge
 
 }
 
+
+/*
+====================================================
+Cancelled
+====================================================
+*/
+
 .event-status.cancelled {
 
     background: #fee2e2;
@@ -315,6 +398,7 @@ Status Badge
     color: #dc2626;
 
 }
+
 
 /*
 ====================================================
@@ -326,7 +410,13 @@ Action Buttons
 
     display: flex;
 
+    align-items: center;
+
+    justify-content: center;
+
     gap: 10px;
+
+    white-space: nowrap;
 
 }
 
@@ -349,7 +439,7 @@ Action Buttons
 
     justify-content: center;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -357,7 +447,7 @@ Action Buttons
 
     background: #f59e0b;
 
-    color: white;
+    color: #fff;
 
 }
 
@@ -365,13 +455,15 @@ Action Buttons
 
     background: #d97706;
 
+    transform: translateY(-2px);
+
 }
 
 .delete-btn {
 
     background: #ef4444;
 
-    color: white;
+    color: #fff;
 
 }
 
@@ -379,7 +471,10 @@ Action Buttons
 
     background: #dc2626;
 
+    transform: translateY(-2px);
+
 }
+
 
 /*
 ====================================================
@@ -409,11 +504,13 @@ Pagination
 
     background: #2563eb;
 
-    color: white;
+    color: #fff;
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: 0.3s;
+
+    font-weight: 500;
 
 }
 
@@ -425,7 +522,7 @@ Pagination
 
 .pagination button:disabled {
 
-    opacity: .5;
+    opacity: 0.5;
 
     cursor: not-allowed;
 
@@ -439,9 +536,10 @@ Pagination
 
 }
 
+
 /*
 ====================================================
-Loading
+Loading / Empty State
 ====================================================
 */
 
@@ -449,7 +547,7 @@ Loading
 
     text-align: center;
 
-    padding: 50px;
+    padding: 50px !important;
 
     color: #6b7280;
 
@@ -457,62 +555,10 @@ Loading
 
 }
 
-/*
-====================================================
-Event Status Badges
-====================================================
-*/
-
-.badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 90px;
-    padding: 7px 14px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    line-height: 1;
-    text-transform: capitalize;
-
-    white-space: nowrap;
-}
-
-/* Upcoming */
-
-.badge.upcoming {
-    background: #dbeafe !important;
-    color: #2563eb !important;
-}
-
-/* Today */
-
-.badge.today {
-    background: #fef3c7 !important;
-    color: #b45309 !important;
-}
-
-/* Completed */
-
-.badge.completed {
-    background: #dcfce7 !important;
-    color: #15803d !important;
-}
-
-/* Cancelled */
-
-.badge.cancelled {
-    background: #fee2e2 !important;
-    color: #dc2626 !important;
-}
 
 /*
 ====================================================
-Responsive
+Responsive - Tablet
 ====================================================
 */
 
@@ -532,6 +578,13 @@ Responsive
 
 }
 
+
+/*
+====================================================
+Responsive - Mobile
+====================================================
+*/
+
 @media (max-width: 768px) {
 
     .events-header {
@@ -540,7 +593,21 @@ Responsive
 
         align-items: flex-start;
 
-        gap: 20px;
+        gap: 18px;
+
+        margin-bottom: 20px;
+
+    }
+
+    .events-header h2 {
+
+        font-size: 25px;
+
+    }
+
+    .events-header p {
+
+        font-size: 13px;
 
     }
 
@@ -548,58 +615,70 @@ Responsive
 
         width: 100%;
 
-        justify-content: center;
-
-    }
-
-}
-
-/* Additional responsive refinements */
-@media (max-width: 768px) {
-    .events-header {
-        margin-bottom: 18px;
-    }
-
-    .events-header h2 {
-        font-size: 25px;
-    }
-
-    .events-header p {
-        font-size: 13px;
     }
 
     .table-container {
+
+        border-radius: 14px;
+
         -webkit-overflow-scrolling: touch;
+
     }
 
     .events-table {
+
         min-width: 820px;
+
     }
 
     .events-table th,
     .events-table td {
+
         padding: 13px;
+
     }
 
     .pagination {
+
         gap: 12px;
+
         flex-wrap: wrap;
+
     }
+
 }
 
+
+/*
+====================================================
+Responsive - Small Mobile
+====================================================
+*/
+
 @media (max-width: 480px) {
+
     .search-container input {
+
         padding-top: 12px;
+
         padding-bottom: 12px;
+
         font-size: 14px;
+
     }
 
     .pagination {
+
         justify-content: center;
+
     }
 
     .pagination button {
+
         flex: 1;
+
         min-width: 100px;
+
     }
+
 }
