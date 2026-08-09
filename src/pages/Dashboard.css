@@ -155,6 +155,92 @@ Card Colors
 }
 
 /*
+====================================================
+Recent Events Status Badges
+====================================================
+*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:90px;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    text-transform:capitalize;
+
+}
+
+/* Upcoming */
+
+.badge.upcoming{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+/* Today */
+
+.badge.today{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+/* Completed */
+
+.badge.completed{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+/* Cancelled */
+
+.badge.cancelled{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+/*
+====================================================
+Empty State
+====================================================
+*/
+
+.dashboard-empty{
+
+    text-align:center;
+
+    padding:35px !important;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+/*
 ==========================================
 Quick Actions
 ==========================================

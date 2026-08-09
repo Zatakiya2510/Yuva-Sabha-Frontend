@@ -468,8 +468,6 @@ const Dashboard = () => {
             ==================================== */}
 
             <div className="dashboard-bottom">
-
-                {/* Recent Events */}
                 {/* =====================================
 Recent Events
 ===================================== */}
@@ -593,118 +591,6 @@ Recent Events
                         </table>
 
                     </div>
-
-                </div>
-                <div className="dashboard-section">
-
-                    <div className="section-header">
-
-                        <h3>
-
-                            Recent Events
-
-                        </h3>
-
-                        <button
-                            type="button"
-                            className="view-all-btn"
-                            onClick={() => navigate("/events")}
-                        >
-
-                            <span>
-
-                                View All
-
-                            </span>
-
-                            <FaArrowRight />
-
-                        </button>
-
-                    </div>
-
-                    <table className="dashboard-table">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>Title</th>
-
-                                <th>Date</th>
-
-                                <th>Status</th>
-
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            {
-
-                                recentEvents.length === 0 ?
-
-                                    <tr>
-
-                                        <td
-                                            colSpan="3"
-                                            style={{
-                                                textAlign: "center"
-                                            }}
-                                        >
-
-                                            No Events Found
-
-                                        </td>
-
-                                    </tr>
-
-                                    :
-
-                                    recentEvents.map(event => (
-
-                                        <tr key={event._id}>
-
-                                            <td>
-
-                                                {event.title}
-
-                                            </td>
-
-                                            <td>
-
-                                                {
-
-                                                    new Date(event.date)
-
-                                                        .toLocaleDateString()
-
-                                                }
-
-                                            </td>
-
-                                            <td>
-
-                                                <span
-                                                    className={`badge ${event.status.toLowerCase()}`}
-                                                >
-
-                                                    {event.status}
-
-                                                </span>
-
-                                            </td>
-
-                                        </tr>
-
-                                    ))
-
-                            }
-
-                        </tbody>
-
-                    </table>
 
                 </div>
 
